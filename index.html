@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Playlist</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+        }
+        #container{
+            padding: 40px 20px;
+        }
+        #container h2{
+            text-align: center;
+        }
+        #song_form{
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        #search_sort_box{
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        #songPlayListTable{
+            margin-top: 30px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th{
+            background-color: #3b3b3b; 
+            color: white;
+        }
+        th,td{
+            text-align: left;
+            border: 1px solid black;
+            padding: 3px 6px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h2>Music Playlist Manager</h2>
+        <!-- Form to input song details -->
+        <form id="song_form">
+            <label>
+                Title: <input type="text" id="titleInp">
+            </label>
+            <label>
+                Artist: <input type="text" id="artistInp">
+            </label>
+            <label>
+                Duration: <input type="number" id="durationInp">
+            </label>
+            <label>
+                Genre: <select id="selectGenre">
+                    <option value="Pop">Pop</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Jazz">Jazz</option>
+                    <option value="Classic">Classic</option>
+                </select>
+            </label>
+            <input type="submit" id="submitInps" value="Add song">
+        </form>
+        <!-- Box for searching and sorting -->
+        <div id="search_sort_box">
+            <label>
+                <input type="text" id="searchByTitleInp" placeholder="Search By Title">
+                <button id="searchByTitleBtn" type="submit">Search</button>
+            </label>
+            <label>
+                Sort by: <select id="sortSongs">
+                    <option value="">Select</option>
+                    <option value="Title">Title</option>
+                    <option value="Artist">Artist</option>
+                    <option value="Duration">Duration</option>
+                    <option value="Genre">Genre</option>
+                </select>
+            </label>
+        </div>
+        <!-- Table to show songs details -->
+         <table id="songPlayListTable">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Artist</th>
+                    <th>Duration</th>
+                    <th>Genre</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="songPlayListTbody">
+                
+            </tbody>
+         </table>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>

@@ -5,3 +5,4 @@ The **Music Playlist Web App** is a simple and interactive music player built us
 ---
 
 ## 📸 Screenshots
+![image](https://github.com/user-attachments/assets/f8c0c71d-ebab-4184-a26e-e6ca52ec73a2)
